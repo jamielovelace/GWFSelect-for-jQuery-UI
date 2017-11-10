@@ -1,4 +1,4 @@
-/* GWFSelect for jQuery UI, version 1.1 (2012-05-14) */
+/* GWFSelect for jQuery UI, version 1.1.1 (2017-11-10) */
 (function ($) {
     var GWFFonts = [];
     var loadedFonts = {};
