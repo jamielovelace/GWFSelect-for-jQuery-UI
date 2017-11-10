@@ -20,7 +20,7 @@ $(function () {
     $('#random').button().click(function () {
         $('#gwf').gwfselect('randomize');
     });
-    $('#gwf-ltd').gwfselect({ fonts: ['Amaranth', 'Artifika', 'Averia Libre'] });
+    $('#gwf-ltd').gwfselect({ fonts: ['Amaranth:400,400italic,700,700italic', 'Artifika', 'Averia Libre', 'Nunito+Sans:400,400i,700,700i,800,800i'] });
 });
     </script>
     <style type="text/css">
@@ -41,8 +41,8 @@ body {
       <button id="random">Randomize</button>
     </section>
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      Lorem <strong>ipsum</strong> dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor <span style="font-weight: 800">incididunt</span> ut labore et dolore magna aliqua. Ut enim ad minim
       veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
       commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
       velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint

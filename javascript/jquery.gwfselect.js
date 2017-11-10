@@ -94,7 +94,7 @@
             this.element.css(styles);
             if (this.element.val() != fontName) {
                 this.element
-                    .val(fontName)
+                    .val(this._tidyFontName(fontName))
                     .trigger('change');
             }
             this._trigger('change', null, styles);
@@ -117,7 +117,7 @@
             var self = this;
             $.each(useFonts, function (i, fontName) {
                 $('<li/>')
-                    .html(fontName)
+                    .html(self._tidyFontName(fontName))
                     .data('fontName', fontName)
                     .css(self._fontNameToStyle(fontName))
                     .appendTo(self.fontList);
@@ -126,6 +126,9 @@
         },
         _fontNameReadable: function (fontName) {
             return fontName.replace(/[\+|:]/g, ' ');
+        },
+        _tidyFontName: function (fontName) {
+            return fontName.replace(/[\+]/g, ' ').replace(/\:(.*)/, '')
         },
         _fontNameToStyle: function (fontName) {
             var t = fontName.split(':');
